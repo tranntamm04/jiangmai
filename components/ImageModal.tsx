@@ -52,7 +52,6 @@ export default function ImageModal({ image, isOpen, onClose, onPrevious, onNext 
           />
         </div>
 
-        {/* Navigation Buttons */}
         <button
           onClick={onPrevious}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full transition-all duration-200"
@@ -68,17 +67,6 @@ export default function ImageModal({ image, isOpen, onClose, onPrevious, onNext 
         >
           <ChevronRight size={24} className="text-black" />
         </button>
-
-        {/* Image Info */}
-        <div className="bg-white p-6 border-t border-gray-200">
-          <div className="flex flex-wrap gap-2">
-            {image.tags.map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-warm-beige text-text-dark text-sm rounded-full">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
