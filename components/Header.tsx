@@ -35,13 +35,13 @@ export default function Header() {
             Home
           </button>
           <button
-            onClick={() => scrollToSection('Ảnh')}
+            onClick={() => scrollToSection('gallery')}
             className="text-text-dark hover:text-forest-green transition-colors font-medium"
           >
             Ảnh
           </button>
           <button
-            onClick={() => scrollToSection('Mục')}
+            onClick={() => scrollToSection('collections')}
             className="text-text-dark hover:text-forest-green transition-colors font-medium"
           >
             Mục
