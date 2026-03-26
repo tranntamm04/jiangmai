@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root {
+  --background: #F5F0E8;
+  --foreground: #1A1A1A;
+  --primary: #2D5A3D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E8D5C4;
+  --secondary-foreground: #1A1A1A;
+  --accent: #8B6F47;
+  --accent-foreground: #FFFFFF;
+  --border: #E0D5CA;
+  --muted: #D4C5B9;
+  --muted-foreground: #5A5A5A;
+}
+
+/* =========================
+   BASE
+========================= */
+
+@layer base {
+  body {
+    @apply bg-cream text-text-dark font-sans;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    font-weight: 600;
+  }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+
+@layer components {
+
+  /* PRIMARY BUTTON */
+  .button-primary {
+    @apply px-6 py-3 bg-forest-green text-text-light rounded-sm font-medium transition-all duration-300;
+  }
+
+  .button-primary:hover {
+    opacity: 0.9;
+  }
+
+  /* SECONDARY BUTTON */
+  .button-secondary {
+    @apply px-6 py-3 bg-warm-beige text-text-dark rounded-sm font-medium transition-all duration-300;
+  }
+
+  .button-secondary:hover {
+    opacity: 0.9;
+  }
+
+  /* CARD */
+  .gallery-card {
+    @apply relative overflow-hidden rounded-sm bg-white shadow-sm transition-all duration-300;
+  }
+
+  .gallery-card:hover {
+    @apply shadow-lg;
+  }
+
+  /* TITLES */
+  .section-title {
+    @apply text-4xl font-bold font-serif text-text-dark mb-4;
+  }
+
+  /* ❗ md: không dùng trong @apply (Tailwind v4 rule) */
+  @media (min-width: 768px) {
+    .section-title {
+      @apply text-5xl;
+    }
+  }
+
+  /* SUBTITLE */
+  .section-subtitle {
+    @apply text-lg max-w-2xl;
+    color: var(--muted-foreground);
+  }
+}
