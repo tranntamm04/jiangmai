@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"], variable: '--font-mono' });
 const _crimsonText = Crimson_Text({ subsets: ["latin"], weight: ['400', '600', '700'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
-  title: 'Gallery - Premium Image Showcase',
+  title: 'Giang Mai Súc Lô',
   description: 'Discover our curated collection of stunning images across multiple categories. A premium gallery experience with modern design and seamless navigation.',
   generator: 'v0.app',
   viewport: {

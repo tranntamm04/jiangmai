@@ -44,7 +44,7 @@ export default function ImageModal({ image, isOpen, onClose, onPrevious, onNext 
         <div className="relative flex-1 flex items-center justify-center bg-black">
           <Image
             src={image.image}
-            alt={image.title}
+            alt={image.id}
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
@@ -71,8 +71,6 @@ export default function ImageModal({ image, isOpen, onClose, onPrevious, onNext 
 
         {/* Image Info */}
         <div className="bg-white p-6 border-t border-gray-200">
-          <h2 className="text-2xl font-serif font-bold text-text-dark mb-2">{image.title}</h2>
-          <p className="text-muted-foreground mb-4">{image.description}</p>
           <div className="flex flex-wrap gap-2">
             {image.tags.map((tag) => (
               <span key={tag} className="px-3 py-1 bg-warm-beige text-text-dark text-sm rounded-full">
